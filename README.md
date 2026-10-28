@@ -1,5 +1,12 @@
 # L0-ISM: Layer 0 Invariant State Matrix & Neuro-Symbolic AI Safety Framework
 
+[![L0-ISM Neuro-Symbolic Guardrail Verification CI](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
+[![Hardware: CERN-OHL-S](https://img.shields.io/badge/Hardware-CERN--OHL--S-orange.svg)](LICENSE)
+[![Theory: CC BY-NC-ND 4.0](https://img.shields.io/badge/Theory-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE)
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![C99 Standard](https://img.shields.io/badge/Standard-C99_RTOS-brightgreen.svg)]()
+
 > **Deterministic Real-Time Formal Verification, Helical Venturi Constriction, and L0-ISM Hardware Interdiction for Large Language Models & Cyber-Physical Control Systems.**
 
 ---
@@ -33,14 +40,20 @@ State trajectories are quantized into a symmetric, bounded 19-state lattice:
 `S ∈ {-9, ..., 0, ..., +9}`
 
 - **Fulcrum (0):** The absolute zero point of physical equilibrium.
-- **Conservation Law:** Total state flux must satisfy `∑ Δs_i = 0`.
+- **Conservation Law:** Total state flux must satisfy `∑ Δs_i = 0` (or `P + T == Q`).
 - **Absorbing Boundaries (±9):** Reaching boundary saturation triggers an immediate **-999 HARD_STOP** hardware interdiction.
 
 ### 4. Real-Time SMT/CP-SAT Formal Solver
-Quantized state vectors **s** = (s_1, s_2, ..., s_k) are evaluated instantaneously by an embedded formal solver (Google OR-Tools CP-SAT / SMT Z3):
-- **Valid States (SAT):** Latency < 0.35 ms → Action execution permitted.
-- **Invariant Violation (UNSAT):** Latency < 0.30 ms → Instantaneous **-999 HARD_STOP** interdiction.
+Quantized state vectors **s** = (s_1, s_2, ..., s_k) are evaluated instantaneously by an embedded formal solver (Google OR-Tools CP-SAT / SMT Z3 / C99 RTOS Engine):
+- **Valid States (SAT):** Latency < 6.5 ms → Action execution permitted (`PERMIT`).
+- **Invariant Violation (UNSAT):** Latency < 0.35 ms → Instantaneous **-999 HARD_STOP** interdiction.
 
 ---
 
 ## 🗂️ Repository Structure
+
+```text
+Neuro-Symbolic-AI-Architecture/
+├── .github/
+│   └── workflows/
+│       └── l0_ism_verification_ci.yml    # Automated C99 GCC & SMT
