@@ -3,8 +3,8 @@
 [![L0-ISM Neuro-Symbolic Guardrail Verification CI](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml)
 [![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
-[![Hardware: CERN-OHL-S](https://img.shields.io/badge/Hardware-CERN--OHL--S-orange.svg)](LICENSE)
-[![Theory: CC BY-NC-ND 4.0](https://img.shields.io/badge/Theory-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE)
+[![Hardware: CERN-OHL-S](https://img.shields.io/badge/Hardware-CERN--OHL--S-orange.svg)](LICENSE CERN-OHL-S-2.0)
+[![Theory: CC BY-NC-ND 4.0](https://img.shields.io/badge/Theory-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE CC-BY-NC-ND-4.0)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![C99 Standard](https://img.shields.io/badge/Standard-C99_RTOS-brightgreen.svg)]()
 
@@ -57,16 +57,21 @@ Quantized state vectors **s** = (s_1, s_2, ..., s_k) are evaluated instantaneous
 Neuro-Symbolic-AI-Architecture/
 ├── .github/
 │   └── workflows/
-│       ├── l0_ism_verification_ci.yml    # Automated C99 GCC CI/CD Pipeline
-│       └── z3_verification.yml           # Automated SMT Z3 Hardware Verification
+│       ├── l0_ism_verification_ci.yml           # Automated C99 GCC CI/CD Pipeline
+│       └── z3_verification.yml                  # Automated SMT Z3 Hardware Verification
 ├── docs/
-│   ├── neuro-symbolic-ai-l0-ism-monograph-v2.pdf    # Full English Monograph on Neuro-Symbolic AI
-│   ├── khipu-l0-ism-mathematical-monograph-v4.pdf   # Monograph on Kipu 3D Data Bus Architecture
-│   └── L0_ISM_Biala_Ksiega_Inzynieryjna.pdf         # Complete Engineering Whitepaper
+│   ├── 2026-10-27 235950.png                    # System schema/diagram
+│   ├── Neuro-Symbolic AI Architecture.png       # Architecture visualization
+│   ├── neuro-symbolic-ai-l0-ism-monograph.pdf   # Full English Monograph on Neuro-Symbolic AI
+│   └── sobolev-vs-l0-ism-formal-monograph.pdf   # Sobolev vs L0-ISM Formal Verification Monograph
 ├── scripts/
-│   ├── l0_ism_governor.h                           # ISO C99 RTOS Hardware Interdiction Governor Header
-│   ├── l0_ism_governor.c                           # Deterministic C99 RTOS Test Verification Driver
-│   ├── test_z3_neuro_symbolic.py                   # PyTorch + Google OR-Tools CP-SAT / Z3 Verification Pipeline
-│   └── r_aio_5module_simulation.py                 # Multi-module Thermodynamic Dynamic Telemetry Simulation
-├── LICENSE                                         # Triad Licensing Terms (AGPLv3 / CERN-OHL-S / CC BY-NC-ND)
-└── README.md                                       # Core Framework Documentation
+│   ├── L0_ISM_Watchdog.py                       # Live telemetry watchdog script
+│   ├── l0_ism_governor.h                        # ISO C99 RTOS Hardware Interdiction Governor Header
+│   ├── l0_ism_governor.c                        # Deterministic C99 RTOS Test Verification Driver
+│   ├── neuro symbolic l0 ism.c                  # Neuro-symbolic C99 engine implementation
+│   └── test_z3_neuro_symbolic.py                # PyTorch + Google OR-Tools CP-SAT / Z3 Verification Pipeline
+├── .gitignore
+├── LICENSE                                      # Primary License (AGPLv3)
+├── LICENSE CC-BY-NC-ND-4.0                      # Theory and Monograph License
+├── LICENSE CERN-OHL-S-2.0                       # Hardware Reciprocal License
+└── README.md                                    # Core Framework Documentation
