@@ -1,13 +1,12 @@
 # L0-ISM: Layer 0 Invariant State Matrix & Neuro-Symbolic AI Safety Framework
 
 [![L0-ISM Neuro-Symbolic Guardrail Verification CI](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml)
+[![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
 [![Hardware: CERN-OHL-S](https://img.shields.io/badge/Hardware-CERN--OHL--S-orange.svg)](LICENSE)
 [![Theory: CC BY-NC-ND 4.0](https://img.shields.io/badge/Theory-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![C99 Standard](https://img.shields.io/badge/Standard-C99_RTOS-brightgreen.svg)]()
-
-[![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
 
 > **Deterministic Real-Time Formal Verification, Helical Venturi Constriction, and L0-ISM Hardware Interdiction for Large Language Models & Cyber-Physical Control Systems.**
 
@@ -58,4 +57,16 @@ Quantized state vectors **s** = (s_1, s_2, ..., s_k) are evaluated instantaneous
 Neuro-Symbolic-AI-Architecture/
 ├── .github/
 │   └── workflows/
-│       └── l0_ism_verification_ci.yml    # Automated C99 GCC & SMT
+│       ├── l0_ism_verification_ci.yml    # Automated C99 GCC CI/CD Pipeline
+│       └── z3_verification.yml           # Automated SMT Z3 Hardware Verification
+├── docs/
+│   ├── neuro-symbolic-ai-l0-ism-monograph-v2.pdf    # Full English Monograph on Neuro-Symbolic AI
+│   ├── khipu-l0-ism-mathematical-monograph-v4.pdf   # Monograph on Kipu 3D Data Bus Architecture
+│   └── L0_ISM_Biala_Ksiega_Inzynieryjna.pdf         # Complete Engineering Whitepaper
+├── scripts/
+│   ├── l0_ism_governor.h                           # ISO C99 RTOS Hardware Interdiction Governor Header
+│   ├── l0_ism_governor.c                           # Deterministic C99 RTOS Test Verification Driver
+│   ├── test_z3_neuro_symbolic.py                   # PyTorch + Google OR-Tools CP-SAT / Z3 Verification Pipeline
+│   └── r_aio_5module_simulation.py                 # Multi-module Thermodynamic Dynamic Telemetry Simulation
+├── LICENSE                                         # Triad Licensing Terms (AGPLv3 / CERN-OHL-S / CC BY-NC-ND)
+└── README.md                                       # Core Framework Documentation
