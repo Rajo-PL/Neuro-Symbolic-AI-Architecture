@@ -75,8 +75,3 @@ static inline l0_action_code_t l0_ism_verify_state(const l0_state_vector_t* stat
 #endif
 
 #endif /* L0_ISM_GOVERNOR_H */
-Krok 2: Dodaj flagę -I scripts w .github/workflows/l0_ism_verification_ci.yml
-Upewnij się, że w pliku workflow komenda kompilacji zawiera flagę dołączania katalogu nagłówków (-I scripts):
-    - name: Compile C99 RTOS Governor Engine
-      run: |
-        gcc -std=c99 -Wall -Wextra -Werror -I scripts -O3 scripts/l0_ism_governor.c -o scripts/l0_governor_test
