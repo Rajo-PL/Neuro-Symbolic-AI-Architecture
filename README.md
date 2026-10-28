@@ -2,6 +2,8 @@
 
 [![DOI: Sobolev vs L0-ISM](https://zenodo.org/badge/DOI/10.5281/zenodo.23733958.svg)](https://doi.org/10.5281/zenodo.23733958)
 [![DOI: Neuro-Symbolic L0-ISM](https://zenodo.org/badge/DOI/10.5281/zenodo.23712150.svg)](https://doi.org/10.5281/zenodo.23712150)
+[![DOI: L0-ISM Architecture](https://zenodo.org/badge/DOI/10.5281/zenodo.23659300.svg)](https://doi.org/10.5281/zenodo.23659300)
+[![DOI: Control Architecture for Critical L0](https://zenodo.org/badge/DOI/10.5281/zenodo.23601459.svg)](https://doi.org/10.5281/zenodo.23601459)
 [![L0-ISM Neuro-Symbolic Guardrail Verification CI](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml)
 [![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
