@@ -16,7 +16,7 @@ int main(void) {
         { .p = 9, .t = 0, .q = 0, .strain = 8, .twist = L0_TWIST_NEUTRAL }  /* Saturation: p=9 (UNSAT) */
     };
 
-    size_t total_tests = sizeof(test_suite) / sizeof(test_suite);
+    size_t total_tests = sizeof(test_suite) / sizeof(test_suite[0]);
     int failure_count = 0;
 
     for (size_t i = 0; i < total_tests; i++) {
