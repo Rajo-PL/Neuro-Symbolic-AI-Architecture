@@ -37,20 +37,3 @@ int main(void) {
         return EXIT_FAILURE;
     }
 }
-Ścieżka: scripts/README.md
-# L0-ISM Implementation Scripts & RTOS Engine
-
-This directory contains reference implementations of the **Layer 0 Invariant State Matrix (L0-ISM)** architecture, as formalized in *Continuous Sobolev Local Smoothing vs. Discrete L0-ISM Hardware Interdiction: A Unified Data Physics Monograph*.
-
-## Files Overview
-
-* `test_z3_neuro_symbolic.py`: Python benchmark integrating PyTorch logits, Helical Venturi Operator $\Phi_v$, and CP-SAT/SMT Z3 sub-millisecond formal verification.
-* `l0_ism_governor.h`: Zero-dependency, ISO C99 Header-Only RTOS governor for microcontrollers (ARM Cortex-M, ESP32, FPGA).
-* `l0_ism_governor.c`: Verification driver testing $O(1)$ boundary saturation and zero-sum flux conservation.
-
-## Quick Start & Testing
-
-### C99 RTOS Governor Compilation
-```bash
-gcc -std=c99 -Wall -Wextra -Werror -O3 l0_ism_governor.c -o l0_governor_test
-./l0_governor_test
