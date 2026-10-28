@@ -53,6 +53,18 @@ Quantized state vectors **s** = (s_1, s_2, ..., s_k) are evaluated instantaneous
 - **Valid States (SAT):** Latency < 6.5 ms → Action execution permitted (`PERMIT`).
 - **Invariant Violation (UNSAT):** Latency < 0.35 ms → Instantaneous **-999 HARD_STOP** interdiction.
 
+### 5. The R-AIO Survival Loop (Autopoietic Behavioral Control)
+To enforce cognitive discipline without retraining the LLM's weights, the architecture treats the AI as a cyber-physical organism bound by a virtual thermodynamic oxygen budget (O_2):
+* **Reward (SAT):** If the LLM generates physically valid state vectors (e.g., P+T=Q), the O_2 budget increases.
+* **Penalty (UNSAT):** Hallucinations, syntax errors, or physical violations instantly consume O_2.
+* **Digital Hypoxia:** At critically low O_2, the system dynamically slashes the context window by 50% to physically choke off the bandwidth required for generating verbose hallucinations.
+* **Execution (kill -9):** If O_2 depletes to zero, the governor triggers a kernel-level hardware interdiction (Exit Code 137). The stochastic process is destroyed before any invalid signal reaches physical actuators.
+
+### 6. The "Wow! Signal" Architecture (Stochastic Noise Filtration)
+Inspired by the 1977 astrophysics discovery, this framework treats continuous LLM probabilistic generation not as logic, but as high-entropy "cosmic background noise". 
+* **Venturi Compression:** Unconstrained neural outputs are forcibly compressed through a mathematical Venturi Nozzle into a discrete 19-state vector in [-9, +9].
+* **Signal Isolation:** Just as the Big Ear telescope isolated a true signal from space by locking onto the 1420 MHz hydrogen line, the L0-ISM Z3 solver acts as a hardware receptor. It listens *only* for state vectors that perfectly satisfy physical invariants (e.g., P+T=Q) and strict time windows (T-OTP).
+* **Absolute Filtration:** Any output that fails physical grounding is rejected as stochastic noise. Only deterministic, physically verified "Wow! Signals" are permitted to reach critical actuators.
 ---
 ## 📊 Benchmark Results (Live CI/CD Verification Logs)
 
