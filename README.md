@@ -7,6 +7,8 @@
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![C99 Standard](https://img.shields.io/badge/Standard-C99_RTOS-brightgreen.svg)]()
 
+[![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
+
 > **Deterministic Real-Time Formal Verification, Helical Venturi Constriction, and L0-ISM Hardware Interdiction for Large Language Models & Cyber-Physical Control Systems.**
 
 ---
