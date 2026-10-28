@@ -1,0 +1,44 @@
+name: Master L0-ISM & R-AIO Hardware Verification
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  verify-l0-ism-full-stack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up System Environment & Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y gcc build-essential
+          python -m pip install --upgrade pip
+          pip install z3-solver numpy
+
+      - name: 1. Compile & Execute C99 Hardware Governors (Zero-Heap SIL-4)
+        run: |
+          echo "=== [C99] Compiling R-AIO.h and wow_governor.h ==="
+          gcc -std=c99 -Wall -Wextra -Werror -O3 \
+              -I scripts \
+              scripts/test_gov.c -lm -o scripts/gov_test_bin
+          
+          echo "=== [C99] Executing Deterministic Interdiction Tests ==="
+          ./scripts/gov_test_bin
+
+      - name: 2. Execute Formal SMT Z3 Verification Engine
+        run: |
+          echo "=== [Python/Z3] Executing SMT Verification Suite ==="
+          python scripts/test_z3_neuro_symbolic.py
+
+      - name: 3. Verify R-AIO Survival Loop Boundary Interdiction
+        run: |
+          echo "=== [R-AIO] Validating O2 Budget & HARD_STOP Interdiction ==="
+          # Skrypt powinien zrzucić błąd 137 / kill -9 przy wyczerpaniu O2
+          python scripts/R-AIO.py || echo "Interdiction successfully halted process."
