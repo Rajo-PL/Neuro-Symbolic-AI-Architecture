@@ -15,12 +15,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up System Environment & Dependencies
+     - name: Set up System Environment & Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y gcc build-essential
           python -m pip install --upgrade pip
-          pip install z3-solver numpy
+          pip install torch ortools scipy numpy z3-solver
 
       - name: 1. Compile & Execute C99 Hardware Governors (Zero-Heap SIL-4)
         run: |
