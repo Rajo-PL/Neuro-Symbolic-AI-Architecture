@@ -1,0 +1,13 @@
+# Clone the repository
+git clone [https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture.git](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture.git)
+cd Neuro-Symbolic-AI-Architecture
+
+# Install python dependencies
+pip install torch ortools scipy numpy
+
+# 1. Compile and run C99 RTOS Real-Time Governor
+gcc -std=c99 -Wall -Wextra -Werror -I scripts -O3 scripts/l0_ism_governor.c -o scripts/l0_governor_test
+./scripts/l0_governor_test
+
+# 2. Run Neuro-Symbolic SMT Z3 / CP-SAT Verification Benchmark
+python scripts/test_z3_neuro_symbolic.py
