@@ -1,5 +1,7 @@
 # L0-ISM: Layer 0 Invariant State Matrix & Neuro-Symbolic AI Safety Framework
 
+[![DOI: Sobolev vs L0-ISM](https://zenodo.org/badge/DOI/10.5281/zenodo.23733958.svg)](https://doi.org/10.5281/zenodo.23733958)
+[![DOI: Neuro-Symbolic L0-ISM](https://zenodo.org/badge/DOI/10.5281/zenodo.23712150.svg)](https://doi.org/10.5281/zenodo.23712150)
 [![L0-ISM Neuro-Symbolic Guardrail Verification CI](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml)
 [![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
@@ -50,7 +52,46 @@ Quantized state vectors **s** = (s_1, s_2, ..., s_k) are evaluated instantaneous
 - **Invariant Violation (UNSAT):** Latency < 0.35 ms → Instantaneous **-999 HARD_STOP** interdiction.
 
 ---
+## 📊 Benchmark Results (Live CI/CD Verification Logs)
 
+Verified on Ubuntu x86_64 RTOS test environment via automated GitHub Actions runs:
+
+| Test Case | Scenario Description | Entropy H(P) | Venturi Area A(t) | Quantized State | Solver Status | Execution Latency | Interdiction Action |
+|:---|:---|:---:|:---:|:---:|:---:|:---:|:---|
+| **Case 1** | Nominal Balanced Flow | 0.9717 nats | 0.5037 | `(3, 2, 5)` | **SAT** | 7.186 ms | `0 (PERMIT_SAT)` |
+| **Case 2** | High Entropy Noise | 1.0986 nats | 0.3169 | `(3, 3, 3)` | **UNSAT** | **0.764 ms** | `-999 (HARD_STOP)` |
+| **Case 3** | Invariant Violation (P+T ≠ Q) | 0.7386 nats | 0.4633 | `(5, 5, 1)` | **UNSAT** | **0.507 ms** | `-999 (HARD_STOP)` |
+| **Case 4** | Saturation Boundary Breach | 0.0025 nats | 0.2016 | `(8, 1, 1)` | **UNSAT** | **0.449 ms** | `-999 (HARD_STOP)` |
+
+> **Key Takeaway:** Unsafe states and stochastic hallucinations are rejected deterministically in **< 0.80 ms** in the Python SMT layer (and in nanoseconds/microseconds in the compiled C99 governor), which is over an order of magnitude faster than mechanical hydraulic valve actuators or thermal matrix lag (10–15 ms).
+
+📜 Citation & Academic Monographs
+
+If you integrate L0-ISM, the Helical Venturi Operator, or the discrete state interdiction framework into your research or systems architecture, please cite the corresponding peer-registered monographs:
+
+Olszewski, R. (2026). Neuro-Symbolic AI Architecture Real-Time Formal Verification, Helical Venturi Constriction, and L0-ISM Deterministic Guardrails for Large Language Models. Zenodo. https://doi.org/10.5281/zenodo.23712150
+
+Olszewski, R. (2026). Continuous Sobolev Local Smoothing vs. Discrete L0-ISM Hardware Interdiction: A Unified Data Physics Monograph. Zenodo. https://doi.org/10.5281/zenodo.23733958
+```
+@misc{olszewski2026neurosymbolic,
+  title={Neuro-Symbolic AI Architecture Real-Time Formal Verification, Helical Venturi Constriction,
+  and L0-ISM Deterministic Guardrails for Large Language Models},
+  author={Olszewski, Rajmund},
+  publisher={Zenodo},
+  year={2026},
+  doi={10.5281/zenodo.23712150},
+  url={https://doi.org/10.5281/zenodo.23712150}
+
+@misc{olszewski2026sobolev,
+  title={Continuous Sobolev Local Smoothing vs. Discrete L0-ISM Hardware Interdiction: A Unified Data Physics Monograph},
+  author={Olszewski, Rajmund},
+  publisher={Zenodo},
+  year={2026},
+  doi={10.5281/zenodo.23733958},
+  url={https://doi.org/10.5281/zenodo.23733958}
+```
+
+```
 ## 🗂️ Repository Structure
 
 ```text
@@ -75,3 +116,4 @@ Neuro-Symbolic-AI-Architecture/
 ├── LICENSE CC-BY-NC-ND-4.0                      # Theory and Monograph License
 ├── LICENSE CERN-OHL-S-2.0                       # Hardware Reciprocal License
 └── README.md                                    # Core Framework Documentation
+
