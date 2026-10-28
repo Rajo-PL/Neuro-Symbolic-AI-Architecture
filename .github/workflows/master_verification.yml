@@ -8,14 +8,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  verify-l0-ism-full-stack:
+  verify-l0-ism:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-     - name: Set up System Environment & Dependencies
+      - name: Set up System Environment & Dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y gcc build-essential
@@ -40,5 +40,4 @@ jobs:
       - name: 3. Verify R-AIO Survival Loop Boundary Interdiction
         run: |
           echo "=== [R-AIO] Validating O2 Budget & HARD_STOP Interdiction ==="
-          # Skrypt powinien zrzucić błąd 137 / kill -9 przy wyczerpaniu O2
           python scripts/R-AIO.py || echo "Interdiction successfully halted process."
