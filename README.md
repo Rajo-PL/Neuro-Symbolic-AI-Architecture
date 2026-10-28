@@ -3,8 +3,8 @@
 [![L0-ISM Neuro-Symbolic Guardrail Verification CI](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/l0_ism_verification_ci.yml)
 [![Z3 Hardware Verification (L0-ISM)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml/badge.svg)](https://github.com/Rajo-PL/Neuro-Symbolic-AI-Architecture/actions/workflows/z3_verification.yml)
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](LICENSE)
-[![Hardware: CERN-OHL-S](https://img.shields.io/badge/Hardware-CERN--OHL--S-orange.svg)](LICENSE CERN-OHL-S-2.0)
-[![Theory: CC BY-NC-ND 4.0](https://img.shields.io/badge/Theory-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE CC-BY-NC-ND-4.0)
+[![Hardware: CERN-OHL-S](https://img.shields.io/badge/Hardware-CERN--OHL--S-orange.svg)](LICENSE%20CERN-OHL-S-2.0)
+[![Theory: CC BY-NC-ND 4.0](https://img.shields.io/badge/Theory-CC_BY--NC--ND_4.0-lightgrey.svg)](LICENSE%20CC-BY-NC-ND-4.0)
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![C99 Standard](https://img.shields.io/badge/Standard-C99_RTOS-brightgreen.svg)]()
 
