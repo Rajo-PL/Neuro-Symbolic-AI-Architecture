@@ -29,7 +29,7 @@ jobs:
 
     - name: Compile C99 RTOS Governor Engine
       run: |
-        gcc -std=c99 -Wall -Wextra -Werror -O3 scripts/l0_ism_governor.c -o scripts/l0_governor_test
+        gcc -std=c99 -Wall -Wextra -Werror -I scripts -O3 scripts/l0_ism_governor.c -o scripts/l0_governor_test
 
     - name: Run C99 RTOS Verification Driver
       run: |
